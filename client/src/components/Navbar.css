@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 1rem 2rem;
+}
+
+.logo {
+    font-family: 'Algerian', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2fc6f0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #61dafb;
+}

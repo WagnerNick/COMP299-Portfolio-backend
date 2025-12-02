@@ -19,7 +19,7 @@ app.use('/api/qualifications', require('./backend/routes/qualifications'));
 app.use('/api/users', require('./backend/routes/users'));
 app.use('/api/auth', require('./backend/routes/auth'));
 
-app.get('/', (req, res) => res.send('Welcome to my Portfolio application'));
+app.get('/', (req, res) => res.send('Hello from Node API!'));
 
 if (process.env.NODE_ENV === 'production') {
   const clientBuild = path.join(__dirname, 'client', 'dist');

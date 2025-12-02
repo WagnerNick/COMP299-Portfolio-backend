@@ -4,14 +4,12 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://portfolioUser:portPassword@portfolio.twzn25h.mongodb.net/Portfolio?retryWrites=true&w=majority&appName=Portfolio';
-const PORT = process.env.PORT || 5000;
-
 const app = express();
+const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err.message));
 
